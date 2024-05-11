@@ -1,0 +1,341 @@
+/* ========================= SANS-SERIF FONT ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+/* ========================= SERIF FONT ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ========================= VARIABLE CSS ========================= */
+:root {
+    /*========== COLORS ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #46291D;
+    --second-color: #F5ECE1;
+    --third-color: #303030;
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(222, 100%, 2%);
+    --container-color: linear-gradient(136deg, #4A2F1E, #3E2723);
+
+    /*========== FONT AND TYPOGRAPHY ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --title-font: "PT Serif", serif;
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Montserrat", sans-serif;
+    
+    --biggest-font-size: 7.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.3rem;
+    --big-font-size: 1.4rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.7rem;
+    
+    /*========== FONT WEIGHT ==========*/
+    --small-font-weight: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 800    ;
+
+    /*========== MARGIN ==========*/
+    --mb-0-5: 0.5rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-25: 2.25rem;
+    --mb-2-50: 2.5rem;
+    --mb-2-75: 2.75rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* ========================= GLOBAL CSS ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================= NAVIGATIONS CSS ========================= */
+.nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    font-size: 25px;
+    background: var(--white-color);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sitename {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    padding: 13px;
+    text-transform: uppercase;
+}
+
+.sitename a {
+    color: var(--black-color);
+}
+
+.nav__list hr {
+    width: 180px;
+}
+
+.nav__menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: var(--white-color);
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    transition: left 0.6s ease;
+    z-index: var(--z-fixed);
+    box-shadow: 10px 20px 50px 0 rgba(15, 15, 15, 0.08), 0 2px 4px 0 rgba(37, 37, 37, 0.12);
+}
+
+.nav__list {
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.nav__item {
+    margin: 15px 0;
+}
+
+.nav__link {    
+    color: var(--black-color);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__toggle, .nav__close {
+    cursor: pointer;
+}
+
+.nav__toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nav__close {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    margin-bottom: 200px;
+    color: var(--black-color);
+}
+
+.cart__design {
+    max-width: 25px;
+}
+
+.logout {
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
+    color: var(--black-color);
+    font-family: var(--second-font);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ========================= MEDIA QUERY MOBILE ========================= */
+@media screen and (min-width: 320px) {
+
+    h1 {
+        text-align: center;
+        color: var(--first-color);
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .logout {
+        display: block;
+    }
+    
+    table {
+        width: 60%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    th {
+        background-color: var(--first-color);
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    /* CSS for table cells */
+    td {
+        padding: 10px;
+        border-bottom: 1px solid var(--first-color);
+    }
+
+
+    main {
+        padding-top: 6rem;
+    }
+    
+
+    .buttons {
+        margin-top: 1rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 10vh;
+    }
+    
+    .buttons button, .send {
+        padding: 0.5rem;
+        background-color: transparent;
+        border: solid 2px var(--first-color);
+        font-weight: bold;
+        border-radius: 5px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    
+    .send {
+        padding: 0.5rem 1rem;
+        width: 100px;
+    }
+
+    .add_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 3rem;
+        box-shadow: 0 0 10px 5px rgba(0,0,0,0.15);
+    }
+
+    .product_box, .user_box, .order_box {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+
+    input {
+        border: none;
+        border-bottom: 3px solid var(--first-color);
+        padding: 10px;
+        margin-top: 5px;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+    
+    .no-border {
+        border-bottom: none;
+    }
+    
+    legend {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .buttons button:hover, .send:hover{
+        background-color: var(--first-color);
+        color: white;
+    }
+    
+    label {
+        color: var(--first-color);
+        font-weight: bold;
+    }
+    
+    span {
+        display: none;
+    }
+    
+}
+
+/* ========================= MEDIA QUERY TABLET ========================= */
+@media screen and (min-width: 767px) {
+    
+    table {
+        width: 80%;
+    }
+
+    .add_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-image {
+        display: block;
+    }
+
+    .buttons {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .buttons button, .send {
+        padding: 1rem;
+        min-width: 150px;
+    }
+
+    .product-image {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+    }
+
+    span {
+        display: block;
+    }    
+
+}
+
+/* ========================= MEDIA QUERY DESKTOP ========================= */
+@media screen and (min-width: 1512px) {
+
+
+        .add_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem 4rem;
+        } 
+    
+} 

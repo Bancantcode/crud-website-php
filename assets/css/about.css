@@ -1,0 +1,498 @@
+/* ========================= SANS-SERIF FONT ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+/* ========================= SERIF FONT ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ========================= VARIABLE CSS ========================= */
+:root {
+    /*========== COLORS ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #46291D;
+    --second-color: #F5ECE1;
+    --third-color: #303030;
+    --fourth-color: #a2a2a2;
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(222, 100%, 2%);
+    --container-color: linear-gradient(136deg, #4A2F1E, #3E2723);
+
+    /*========== FONT AND TYPOGRAPHY ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --title-font: "PT Serif", serif;
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Montserrat", sans-serif;
+    
+    --biggest-font-size: 7.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.8rem;
+    --big-font-size: 1.4rem;
+    --normal-font-size: 0.9rem;
+    
+    /*========== FONT WEIGHT ==========*/
+    --small-font-weight: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*========== MARGIN ==========*/
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-25: 2.25rem;
+    --mb-2-50: 2.5rem;
+    --mb-2-75: 2.75rem;
+    --mb-3-75: 3.75rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* ========================= GLOBAL CSS ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 15px;
+    background-color: var(--white-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================= NAVIGATIONS CSS ========================= */
+.nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+    font-size: 25px;
+    background: var(--white-color);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sitename {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    padding: 13px;
+    text-transform: uppercase;
+}
+
+.sitename a {
+    color: var(--black-color);
+}
+
+.nav__list hr {
+    width: 180px;
+}
+
+.nav__menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: var(--white-color);
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    transition: left 0.6s ease;
+    z-index: var(--z-fixed);
+    box-shadow: 10px 20px 50px 0 rgba(15, 15, 15, 0.08), 0 2px 4px 0 rgba(37, 37, 37, 0.12);
+}
+
+.nav__list {
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.nav__item {
+    margin: 15px 0;
+}
+
+.nav__link {    
+    color: var(--black-color);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__toggle, .nav__close {
+    cursor: pointer;
+}
+
+.nav__toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nav__close {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    margin-bottom: 200px;
+    color: var(--black-color);
+}
+
+.cart__design { /*TO ADD ON ALL*/
+    max-width: 25px; 
+} 
+
+.logout { /*TO ADD ON ALL*/
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
+    color: var(--black-color);
+    font-family: var(--second-font);
+    font-size: 14px;
+    cursor: pointer;
+} 
+
+/* ========================= SCROLL BAR ========================= */
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background: var(--container-color);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    border-radius: .5rem;
+}
+
+
+/* ========================= ABOUT US ========================= */
+.about__container {
+    display: flex;
+}
+
+.about__grid, .filter__container {
+    display: grid;
+}
+
+.wholebean__button {
+    padding: 20px 34px;
+    background: var(--third-color);
+    font-weight: var(--font-bold);
+    font-size: var(--normal-font-size);
+}
+
+.farmtocup__container {
+    display: flex;
+}
+
+/* ========================= FOOTER ========================= */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__container {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.footer__title {
+    font-family: var(--title-font);
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--black-color);
+    font-family: var(--title-font);
+}
+
+.footer__social {
+    display: flex;
+    column-gap: .75rem;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    background: var(--first-color);
+    padding: .25rem;
+    border-radius: .5rem;
+    color: var(--second-color);
+    font-size: 1.5rem;
+}
+
+.footer__links {
+    display: grid;
+    row-gap: .35rem;
+}
+
+.footer__link {
+    font-size: 0.85rem;
+    color: var(--black-color);
+    transition: .3s;
+}
+
+.footer__copy {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 4.5rem;
+}
+
+.section {
+    padding: 4.5rem 0 2rem;
+    box-shadow: 10px 20px 50px 0 rgba(15, 15, 15, 0.08), 0 2px 4px 0 rgba(37, 37, 37, 0.12);
+}
+
+.footer__item {
+    position: relative;
+}
+
+.footer__item::after {
+    position: absolute;
+    content: '';
+    background: var(--black-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+
+.footer__item:hover::after {
+    width: 65%;
+}
+
+/* ========================= MEDIA QUERY MOBILE ========================= */
+@media screen and (min-width: 320px) {
+    .about__container {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+
+    .farmtocup__container {
+        flex-direction: column-reverse;
+    }
+
+    .about__us, .philosophy, .farm, .farmtocup, .wholebean, .filter, .espresso, .milkbase {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-regular);
+    }
+
+    .about__title, .philosophy__title, .farm__title, .farmtocup__title, .wholebean__title, .filter__title, .espresso__title, .milkbase__title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-2-50);
+        font-family: var(--title-font);
+    }
+
+    .about__description, .philosophy__description, .farm__description, .farmtocup__description, .wholebean__description, .filter__description, .espresso__description, .milkbase__description {
+        margin-bottom: var(--mb-3-75);
+    }
+
+    .about__content, .philosophy__content, .farm__content, .farmtocup__content, .wholebean__content, .filter__content, .espresso__content, .milkbase__content {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .about__image, .farmtocup__image, .about__grid, .filter__image, .espresso__image, .milkbase__image, .wholebean__button {
+        margin-bottom: var(--mb-3-75);
+    }
+
+    .about__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid1, .grid4 {
+        grid-column: 1 / span 2;
+    }
+
+    .wholebean__button {
+        margin-bottom: 100px;
+    }
+
+    .footer__container {
+        margin-left: var(--mb-2-50);
+        margin-right: var(--mb-2-50);
+    }
+
+    .footer__logo {
+        font-size: 1.7rem;
+        font-weight: var(--font-bold);
+        margin-bottom: var(--mb-1);
+    }
+
+    .footer__logo-img {
+        width: 30px;
+    }
+
+    .footer__description {
+        margin-bottom: var(--mb-2);
+    }
+
+    .footer__title {
+        margin-bottom: var(--mb-1);
+    }
+}
+
+/* ========================= MEDIA QUERY TABLET ========================= */
+@media screen and (min-width: 767px) {
+    .grid1, .grid4, .filter__img, .espresso__img, .milkbase__img {
+        width: 100%;
+    }
+
+    .about__content, .philosophy__content, .farm__content, .farmtocup__content, .wholebean__content, .filter__content, .espresso__content, .milkbase__content {
+        width: 65%;
+        margin: auto;
+    }
+
+    .about__description, .philosophy__description, .farm__description, .farmtocup__description, .wholebean__description, .filter__description, .espresso__description, .milkbase__description {
+        font-size: 1rem;
+        margin-bottom: var(--mb-3-75);
+    }
+
+    .about__images, .farmtocup__image, .filter__image, .espresso__image, .milkbase__image {
+        margin-top: 50px;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        column-gap: 1rem;
+    }
+}
+
+/* ========================= MEDIA QUERY DESKTOP ========================= */
+@media screen and (min-width: 992px) {
+    .about__container {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: var(--mb-2-50);
+    }
+
+    .about__img {
+        height: 100vh;
+    }
+
+    .about__content {
+        width: 40%;
+        margin: auto;
+    }
+
+    .farmtocup__img {
+        height: 100vh;
+    }
+
+    .farmtocup__container {
+        flex-direction: row;
+    }
+
+    .about__us, .philosophy, .farm, .farmtocup, .wholebean, .filter, .espresso, .milkbase {
+        font-size: 1rem;
+    }
+
+    .about__title, .philosophy__title, .farm__title, .farmtocup__title, .wholebean__title, .filter__title, .espresso__title, .milkbase__title {
+        font-size: 2.2rem;
+    }
+
+    .about__description, .philosophy__description, .farm__description, .farmtocup__description, .wholebean__description, .filter__description, .espresso__description, .milkbase__description {
+        font-size: 0.9rem;
+        margin-bottom: var(--mb-3-75);
+    }
+
+    .about__content, .farmtocup__content, .filter__content, .milkbase__content, .espresso__content {
+        text-align: start;
+    }
+
+    .about__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid1 {
+        grid-row: 1 / span 4;
+        height: 100%;
+    }
+
+    .grid4 {
+        grid-column: 3 / span 2;
+        height: 576px;
+        object-fit: cover;
+    }
+
+    .filter__container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 75%;
+        margin: auto;
+    }
+
+    .philosophy__title, .farm__title {
+        width: 55%;
+        margin: auto auto var(--mb-2) auto;
+    }
+
+    .philosophy__description, .farm__description, .wholebean__description {
+        width: 65%;
+        margin: auto;
+    }
+
+    .about__grid {
+        margin-top: 110px;
+        margin-bottom: 150px;
+    }
+
+    .farm__description, .wholebean__description {
+        margin-bottom: var(--mb-3-75);
+    }
+
+    .farmtocup__content {
+        width: 40%;
+        margin: auto;
+    }
+
+    .farmtocup__title {
+        width: 80%;
+    }
+
+    .farmtocup__description {
+        width: 85%;
+    }
+
+    .farmtocup__container {
+        margin-bottom: var(--mb-3-75);
+    }
+
+    .filter__image, .espresso__image, .milkbase__image {
+        margin-top: 5px;
+    }
+
+    .filter__img, .espresso__img, .milkbase__img {
+        border-top-left-radius: 250px;
+        border-bottom-right-radius: 140px;
+    }
+
+    .footer__container {
+        max-width: 1300px;
+        margin: auto;
+    }
+}
+

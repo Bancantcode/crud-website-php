@@ -1,7 +1,6 @@
 # Responsive CRUD Coffee Website (Satori)
 
-<h2>This project provides a CRUD interface designed for administrators to manage content on the Satori website.</h2>
-
+<h3>This project provides a CRUD interface designed for administrators to manage content on the Satori website.</h3><br>
 
 - **CRUD Operations for Admins:**
   - Create: Admins can create new content entries.

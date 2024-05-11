@@ -1,0 +1,128 @@
+/* ========================= SANS-SERIF FONT ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+/* ========================= SERIF FONT ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ========================= VARIABLE CSS ========================= */
+:root {
+    /*========== COLORS ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #46291D;
+    --second-color: #F5ECE1;
+    --third-color: #303030;
+    --fourth-color: #a2a2a2;
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(222, 100%, 2%);
+    --container-color: linear-gradient(136deg, #4A2F1E, #3E2723);
+
+    /*========== FONT AND TYPOGRAPHY ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --title-font: "PT Serif", serif;
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Montserrat", sans-serif;
+    
+    --biggest-font-size: 7.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.8rem;
+    --big-font-size: 1.4rem;
+    --normal-font-size: 0.9rem;
+    
+    /*========== FONT WEIGHT ==========*/
+    --small-font-weight: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*========== MARGIN ==========*/
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-25: 2.25rem;
+    --mb-2-50: 2.5rem;
+    --mb-2-75: 2.75rem;
+    --mb-3-75: 3.75rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+.cart-section {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden off-screen to the right */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    z-index: var(--z-fixed);
+    transition: right 0.6s ease; /* Add transition for sliding effect */
+}
+
+.cart-section.show {
+    right: 0; /* Slide in from the right when the 'show' class is added */
+}
+
+
+#toggle-cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.product-name, .total-price-cart {
+    font-weight: bold;
+    color: var(--first-color);
+}
+
+
+.s-cart {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.cart-items {
+    max-height: calc(100% - 250px);
+    overflow-y: auto;
+}
+
+#shopping__cart__title {
+    margin-bottom: 20px;
+    font-family: var(--title-font);
+}
+
+.cart-item {
+    margin-bottom: 2rem;
+}
+
+.remove-btn, #submit {
+    padding: 0.5rem 1rem;
+    background-color: var(--first-color);
+    font-family: var(--font-regular);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cart-summary-container {
+    border-top: 1px solid #ccc;
+    padding: 1rem 0;
+}
+
+#address, #mop {
+    border: none;
+    border-bottom: solid 1px gray;
+    display: block;
+    padding: 5px 0;
+
+}
+
+#address:focus, #mop:focus {
+    outline: none;
+}

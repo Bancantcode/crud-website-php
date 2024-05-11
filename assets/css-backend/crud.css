@@ -171,7 +171,6 @@ img {
 
 /* ========================= MEDIA QUERY MOBILE ========================= */
 @media screen and (min-width: 320px) {
-
     h1 {
         text-align: center;
         color: var(--first-color);
@@ -206,11 +205,9 @@ img {
         border-bottom: 1px solid var(--first-color);
     }
 
-
     main {
         padding-top: 6rem;
     }
-    
 
     .buttons {
         margin-top: 1rem;
@@ -286,13 +283,11 @@ img {
     
     span {
         display: none;
-    }
-    
+    }  
 }
 
 /* ========================= MEDIA QUERY TABLET ========================= */
 @media screen and (min-width: 767px) {
-    
     table {
         width: 80%;
     }
@@ -324,13 +319,10 @@ img {
     span {
         display: block;
     }    
-
 }
 
 /* ========================= MEDIA QUERY DESKTOP ========================= */
 @media screen and (min-width: 1512px) {
-
-
         .add_container {
             display: flex;
             align-items: center;

@@ -2,6 +2,7 @@
 
 <h2>This project provides a CRUD interface designed for administrators to manage content on the Satori website.</h2>
 
+
 - **CRUD Operations for Admins:**
   - Create: Admins can create new content entries.
   - Read: Admins can view existing content entries.

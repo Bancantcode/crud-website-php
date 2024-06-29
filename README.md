@@ -11,3 +11,5 @@
 - **Order Placement for Logged-In Users:**
   - Users can place orders if they are logged in.
   - Orders are processed securely and stored in the system.
+
+![Home Page Preview](Home_preview.png)

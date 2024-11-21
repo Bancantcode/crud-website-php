@@ -2,6 +2,8 @@
 
 <h4>This website was created for our final project in Dynamic Web Programming. The project demonstrates our ability to design and implement dynamic web applications using HTML, CSS, JavaScript, PHP, and MySQL. <br><br>This project provides a CRUD interface designed for administrators to manage content on the Satori website.</h4><br>
 
+<p>Figma link: https://www.figma.com/design/BzqRdUlY3wETQYukDDdMaj/Responsive-CRUD-Coffee-Website?node-id=0-1&t=k4ETdGFPdV8r59fZ-1</p>
+
 - **CRUD Operations for Admins:**
   - Create: Admins can create new content entries.
   - Read: Admins can view existing content entries.

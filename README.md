@@ -22,4 +22,4 @@
 |Project Lead / Frontend Dev / Designer| Bryan Santiago | [@bancantcode](https://github.com/Bancantcode) |
 |Backend Lead / Designer | Luis Miguel Cayanan | [@lmcay](https://github.com/lmcay) |
 |Designer | Princess Aira Guiao | [@prinayra](https://github.com/prinayra) |
-|Designer | Aiko Ocampo [@__]() |
+|Designer | Aiko Ocampo | [@__]() |

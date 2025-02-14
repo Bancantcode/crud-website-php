@@ -15,3 +15,11 @@
   - Orders are processed securely and stored in the system.
 
 ![Home Page Preview](Home_preview.png)
+
+# Contributors 
+| Roles | Names |Links |
+|-|-|-|
+|Project Lead / Frontend Dev / Designer| Bryan Santiago | [@bancantcode](https://github.com/Bancantcode) |
+|Backend Lead / Designer | Luis Miguel Cayanan | [@lmcay](https://github.com/lmcay) |
+|Designer | Princess Aira Guiao | [@prinayra](https://github.com/prinayra) |
+|Designer | Aiko Ocampo [@__]() |
